@@ -1,32 +1,55 @@
-# Udiners 🌳
+# Udiners
 
-**Udiners** adalah aplikasi Android sederhana untuk mengukur tinggi pohon menggunakan metode clinometer dua sudut — cukup masukkan jarak dan dua sudut bidikan, tanpa perlu memanjat atau mengukur langsung.
+Udiners is a lightweight Android app for measuring tree height using the two-angle clinometer method. Enter the horizontal distance to a tree and two sighting angles, and the app calculates its height — no climbing, no direct measurement required.
 
-Aplikasi ini dibuat untuk komunitas relawan lingkungan **TREEO Indonesia | PT Solusi Hutan Digital**, dan dinamai untuk menghormati dedikasi **Edi Yoga** — atau yang lebih dikenal sebagai **"Udin"** — di TREEO Indonesia.
+Built for the environmental volunteers of **TREEO Indonesia | PT Solusi Hutan Digital**, and named as a tribute to **Edi Yoga** — better known as **"Udin"** — for his dedication to TREEO Indonesia.
 
-## ✨ Fitur
+## Table of Contents
 
-- **Hitung tinggi pohon** dari jarak datar + sudut atas + sudut bawah, memakai rumus clinometer dua sudut.
-- **Ilustrasi cara kerja rumus** — diagram visual, rumus, langkah-langkah, dan tips pengukuran yang akurat, ditampilkan dalam popup.
-- **Dua bahasa** — Bahasa Indonesia & English, bisa dipilih manual lewat ikon 🌐 di pojok kiri atas (tersimpan otomatis, tidak perlu diatur ulang tiap buka aplikasi).
-- **Tampilan konsisten** — tema terang dikunci (tidak ikut dark mode sistem), tanpa animasi, dan ringan untuk multitasking di HP dengan RAM terbatas.
-- **Apresiasi** — cerita singkat kenapa aplikasi ini dinamai "Udiners", plus tautan ke profil LinkedIn Edi Yoga.
+- [Features](#features)
+- [Formula](#formula)
+- [Installation](#installation)
+- [Tech Stack](#tech-stack)
+- [Building from Source](#building-from-source)
+- [Localization](#localization)
+- [Credits](#credits)
 
-## 📐 Rumus
+## Features
+
+| Feature | Description |
+|---|---|
+| **Tree height calculation** | Computes tree height from distance and two sighting angles using the two-angle clinometer formula. |
+| **Visual formula guide** | An in-app popup with an illustrated diagram, the formula breakdown, step-by-step instructions, and accuracy tips. |
+| **Bilingual support** | Indonesian and English, switchable manually via the globe icon in the top-left corner. The selection persists automatically. |
+| **Consistent, lightweight UI** | Light theme locked regardless of system dark mode, no animations, and optimized for multitasking on low-RAM devices. |
+| **Appreciation** | A short tribute to Edi Yoga, with a link to his LinkedIn profile. |
+
+## Formula
 
 ```
-Tinggi Pohon = Jarak × (tan(Sudut Atas) − tan(Sudut Bawah))
+Tree Height = Distance × (tan(Top Angle) − tan(Bottom Angle))
 ```
 
-Berlaku untuk pohon dengan tinggi minimal 2 meter, saat posisi mata pengamat lebih rendah dari pangkal pohon (kedua sudut dibidik ke atas). Detail dan tips lengkap ada di dalam aplikasi (tombol **"Cara Kerja Rumus"**).
+This formula is valid for trees at least 2 meters tall, measured when the observer's eye level is below the base of the tree (both angles are sighted upward). Full details, assumptions, and measurement tips are available in-app via the **"How the Formula Works"** button.
 
-## 🛠️ Tech Stack
+## Installation
 
-- Kotlin + Android View Binding
-- Material Components 3 (Material You)
-- Target: `minSdk 26`, `compileSdk 34`
+### Download the APK
 
-## 🚀 Build dari Source
+Download the latest APK from the [Releases](../../releases) page and install it directly on your device.
+
+### Build from source
+
+See [Building from Source](#building-from-source) below.
+
+## Tech Stack
+
+- **Language:** Kotlin
+- **UI:** Android View Binding, Material Components 3
+- **Minimum SDK:** 26 (Android 8.0)
+- **Target/Compile SDK:** 34
+
+## Building from Source
 
 ```bash
 git clone https://github.com/mardiansyah-gunting/udin-converter.git
@@ -34,12 +57,12 @@ cd udin-converter
 ./gradlew assembleDebug
 ```
 
-APK hasil build ada di `app/build/outputs/apk/debug/app-debug.apk`.
+The generated APK will be located at `app/build/outputs/apk/debug/app-debug.apk`.
 
-## 📥 Download
+## Localization
 
-Sudah tidak mau build sendiri? Ambil APK siap pakai di halaman **[Releases](../../releases)**.
+The app ships with full Indonesian and English translations. Language can be changed at any time from within the app and does not follow the device's system locale by default.
 
-## 🙏 Kredit
+## Credits
 
-Dibuat oleh Udiners. Dedikasi khusus untuk **Edi Yoga (Udin)** atas kontribusinya di **TREEO Indonesia**.
+Built by Udiners. Dedicated to **Edi Yoga ("Udin")** in recognition of his contribution to **TREEO Indonesia**.
