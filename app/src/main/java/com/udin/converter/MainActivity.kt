@@ -4,6 +4,7 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.text.InputType
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
@@ -19,11 +20,12 @@ import kotlin.math.tan
 class MainActivity : AppCompatActivity() {
 
     companion object {
-        private const val KEY_RESULT_TEXT = "result_text"
+        private const val KEY_HEIGHT_RESULT = "height_result"
     }
 
     private lateinit var binding: ActivityMainBinding
     private val formatter = DecimalFormat("#.##")
+    private var lastCalculatedHeight: Double? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,12 +44,16 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnLanguage.setOnClickListener { showLanguageMenu() }
 
-        savedInstanceState?.getString(KEY_RESULT_TEXT)?.let { binding.textResult.text = it }
+        if (savedInstanceState != null && savedInstanceState.containsKey(KEY_HEIGHT_RESULT)) {
+            val height = savedInstanceState.getDouble(KEY_HEIGHT_RESULT)
+            lastCalculatedHeight = height
+            binding.textResult.text = getString(R.string.result_value_format, formatter.format(height))
+        }
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
-        outState.putString(KEY_RESULT_TEXT, binding.textResult.text.toString())
+        lastCalculatedHeight?.let { outState.putDouble(KEY_HEIGHT_RESULT, it) }
     }
 
     private fun showLanguageMenu() {
@@ -62,6 +68,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showAppreciationDialog() {
+        binding.profileImage.visibility = View.INVISIBLE
+
         val dialogBinding = DialogAppreciationBinding.inflate(layoutInflater)
         dialogBinding.btnLinkedin.setOnClickListener {
             val url = getString(R.string.appreciation_linkedin_url)
@@ -71,6 +79,7 @@ class MainActivity : AppCompatActivity() {
         MaterialAlertDialogBuilder(this, R.style.ThemeOverlay_UdinConverter_ProfileDialog)
             .setView(dialogBinding.root)
             .setPositiveButton(R.string.dialog_close) { dialog, _ -> dialog.dismiss() }
+            .setOnDismissListener { binding.profileImage.visibility = View.VISIBLE }
             .show()
     }
 
@@ -117,6 +126,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         val height = distance * (tan(Math.toRadians(topAngle)) - tan(Math.toRadians(bottomAngle)))
+        lastCalculatedHeight = height
         binding.textResult.text = getString(R.string.result_value_format, formatter.format(height))
     }
 
