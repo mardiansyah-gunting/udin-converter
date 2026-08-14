@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Udiners</string>
+    <string name="language_switcher_label">Select language</string>
+    <string name="profile_name">Udin</string>
+    <string name="title_tree_height">Tree Height Meter</string>
+    <string name="subtitle_description">Enter your clinometer readings to instantly get the tree\'s height.</string>
+    <string name="label_distance">Distance to tree (meters)</string>
+    <string name="label_top_angle">Angle to treetop (degrees)</string>
+    <string name="label_bottom_angle">Angle to tree base (degrees)</string>
+    <string name="hint_distance">e.g. 10</string>
+    <string name="hint_angle">e.g. 45</string>
+    <string name="btn_calculate">Calculate Tree Height</string>
+    <string name="result_title">Tree Height</string>
+    <string name="result_default">Not calculated yet</string>
+    <string name="result_value_format">%1$s meters</string>
+    <string name="error_invalid_distance">Please enter a valid distance (greater than 0 meters)</string>
+    <string name="error_invalid_top_angle">Please enter a valid top angle</string>
+    <string name="error_invalid_bottom_angle">Please enter a valid bottom angle</string>
+    <string name="hint_title">How the formula works</string>
+    <string name="hint_intro">Height is measured using the two-angle clinometer formula:</string>
+    <string name="hint_formula">Height = Distance × (tan(Top Angle) − tan(Bottom Angle))</string>
+    <string name="hint_steps">1. Measure the horizontal distance from your position to the tree.\n2. Aim the clinometer upward at the treetop and record the top angle.\n3. Aim the clinometer upward at the tree base too, and record the bottom angle.\n4. The result is the tree\'s height in meters.</string>
+    <string name="hint_tips_title">Tips for accurate measurements</string>
+
+    <string-array name="hint_tip_icons">
+        <item>📏</item>
+        <item>📐</item>
+        <item>⚠️</item>
+        <item>🌳</item>
+        <item>📍</item>
+        <item>🌱</item>
+    </string-array>
+
+    <string-array name="hint_tip_titles">
+        <item>Measure Level Distance</item>
+        <item>Base Below Eye Level</item>
+        <item>Avoid Slope Distance</item>
+        <item>Leaning Tree? Stand to the Side</item>
+        <item>Ideal 1:1 Distance</item>
+        <item>Tall Trees Only</item>
+    </string-array>
+
+    <string-array name="hint_tip_descriptions">
+        <item>This formula needs a straight, horizontal distance to the tree — not a slanted distance that follows the ground\'s slope.</item>
+        <item>This formula works when the tree base is lower than your eye level (both angles are aimed upward).</item>
+        <item>If the distance follows the ground\'s slope (slope distance), the calculated tree height may come out taller than it actually is.</item>
+        <item>Stand to the side of the tree, not in front of or behind its lean, for a more accurate reading.</item>
+        <item>Ideally, stand at a distance roughly equal to the tree\'s height. For a ~15-20m tree, stand 15-20m away too.</item>
+        <item>This formula is for trees at least 2 meters tall. For anything shorter, just measure it directly without a clinometer.</item>
+    </string-array>
+    <string name="dialog_close">Close</string>
+    <string name="footer_copyright">© 2026 Made by Udiners</string>
+
+    <string name="appreciation_name">Edi Yoga</string>
+    <string name="appreciation_nickname">🌾 a.k.a "Udin"</string>
+    <string name="appreciation_body">Honestly, "Udiners" only exists because I was bored 😅 — but while I\'m at it, thanks to Yoga for his dedication at TREEO Indonesia! 🌳</string>
+    <string name="appreciation_linkedin">🔗 View LinkedIn Profile</string>
+</resources>

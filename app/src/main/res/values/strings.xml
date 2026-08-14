@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Udiners</string>
+    <string name="lang_option_id" translatable="false">🇮🇩 Indonesia</string>
+    <string name="lang_option_en" translatable="false">🇬🇧 English</string>
+    <string name="language_switcher_label">Pilih bahasa</string>
+    <string name="profile_name">Udin</string>
+    <string name="title_tree_height">Pengukur Tinggi Pohon</string>
+    <string name="subtitle_description">Masukkan hasil pengukuran clinometer untuk mendapatkan tinggi pohon secara langsung.</string>
+    <string name="label_distance">Jarak ke pohon (meter)</string>
+    <string name="label_top_angle">Sudut ke puncak pohon (derajat)</string>
+    <string name="label_bottom_angle">Sudut ke pangkal pohon (derajat)</string>
+    <string name="hint_distance">contoh: 10</string>
+    <string name="hint_angle">contoh: 45</string>
+    <string name="btn_calculate">Hitung Tinggi Pohon</string>
+    <string name="result_title">Tinggi Pohon</string>
+    <string name="result_default">Belum dihitung</string>
+    <string name="result_value_format">%1$s meter</string>
+    <string name="error_invalid_distance">Masukkan jarak yang valid (lebih dari 0 meter)</string>
+    <string name="error_invalid_top_angle">Masukkan sudut atas yang valid</string>
+    <string name="error_invalid_bottom_angle">Masukkan sudut bawah yang valid</string>
+    <string name="hint_title">Cara kerja rumus</string>
+    <string name="hint_intro">Ketinggian diukur dengan rumus clinometer dua sudut:</string>
+    <string name="hint_formula">Tinggi = Jarak × (tan(Sudut Atas) − tan(Sudut Bawah))</string>
+    <string name="hint_steps">1. Ukur jarak horizontal dari posisi Anda ke pohon.\n2. Bidik puncak pohon dengan clinometer mengarah ke atas, catat sudut atas.\n3. Bidik pangkal pohon dengan clinometer, juga mengarah ke atas, catat sudut bawah.\n4. Hasilnya adalah tinggi pohon dalam meter.</string>
+    <string name="hint_tips_title">Tips biar hasil ukur akurat</string>
+
+    <string-array name="hint_tip_icons">
+        <item>📏</item>
+        <item>📐</item>
+        <item>⚠️</item>
+        <item>🌳</item>
+        <item>📍</item>
+        <item>🌱</item>
+    </string-array>
+
+    <string-array name="hint_tip_titles">
+        <item>Ukur Jarak Datar</item>
+        <item>Pangkal di Bawah Mata</item>
+        <item>Hindari Jarak Miring</item>
+        <item>Pohon Miring? Geser ke Samping</item>
+        <item>Jarak Ideal 1:1</item>
+        <item>Khusus Pohon Tinggi</item>
+    </string-array>
+
+    <string-array name="hint_tip_descriptions">
+        <item>Rumus ini butuh jarak lurus/horizontal ke pohon, bukan jarak miring yang ikut naik-turun permukaan tanah.</item>
+        <item>Rumus ini cocok kalau pangkal pohon posisinya lebih rendah dari garis mata kamu (kedua sudut dibidik ke atas).</item>
+        <item>Kalau jarak diukur mengikuti kemiringan tanah (slope distance), tinggi pohon yang dihitung bisa jadi lebih besar dari aslinya.</item>
+        <item>Berdirilah dari sisi samping pohon, bukan dari arah depan atau belakang kemiringannya, biar hasil ukurnya lebih akurat.</item>
+        <item>Idealnya, jarak berdiri kamu kira-kira sama dengan tinggi pohon. Misal pohon ±15-20m, jarak berdiri juga 15-20m.</item>
+        <item>Rumus ini untuk pohon minimal 2 meter. Kalau lebih kecil dari itu, cukup diukur langsung tanpa clinometer.</item>
+    </string-array>
+    <string name="dialog_close">Tutup</string>
+    <string name="footer_copyright">© 2026 Dibuat oleh Udiners</string>
+
+    <string name="appreciation_name">Edi Yoga</string>
+    <string name="appreciation_nickname">🌾 a.k.a "Udin"</string>
+    <string name="appreciation_body">Sejujurnya, "Udiners" ini lahir karena saya gabut 😅 — tapi sekalian mau bilang makasih ke Bang Yoga atas dedikasinya di TREEO Indonesia! 🌳</string>
+    <string name="appreciation_linkedin">🔗 Lihat Profil LinkedIn</string>
+    <string name="appreciation_linkedin_url" translatable="false">https://www.linkedin.com/in/edi-yoga/</string>
+</resources>
